@@ -25,4 +25,8 @@ attr_reader :name, :capacity, :pet
   def over_capacity?
     @pet.length >= @capacity
   end
+
+  def adopt(pet)
+    @pet.delete(pet)
+  end
 end

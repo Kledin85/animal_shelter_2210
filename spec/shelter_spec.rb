@@ -75,4 +75,19 @@ RSpec.describe Shelter do
         expect(shelter.over_capacity?).to eq(false)
       end
     end
+
+    describe '#adopt' do
+      it 'adopts a chosen pet' do
+
+        shelter = Shelter.new('Denver Animal Shelter', 5)
+        shelter.add_pet('Salem')
+        shelter.add_pet('Beethoven')
+        shelter.add_pet('Spot')
+        shelter.add_pet('Jonesy')
+
+        shelter.adopt('Beethoven')
+
+        expect(shelter.pets).to eq(['Salem','Spot','Jonesy'])
+      end
+    end
 end
