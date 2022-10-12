@@ -15,4 +15,10 @@ attr_reader :name, :capacity, :pet
   def add_pet(pet)
     @pet << pet
   end
+
+  def call_pets
+    @pet.each do |call|
+      call << "!"
+    end
+  end
 end
