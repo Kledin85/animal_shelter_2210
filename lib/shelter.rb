@@ -5,14 +5,14 @@ attr_reader :name, :capacity, :pet
   def initialize(name, capacity)
     @name = name
     @capacity = capacity
-    @pet = pet
+    @pet = []
   end
 
   def pets
-    @capacity = []
+    @pet
   end
 
-  def add_pet
-    
+  def add_pet(pet)
+    @pet << pet
   end
 end
